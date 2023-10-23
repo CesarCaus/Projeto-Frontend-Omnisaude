@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <section id="secao-superior">
+        <div id="barra-superior">
+            <div onclick="alterarModo()"  id="modo-claro-escuro">
+                <span id="modo"></span>
+            </div>     
+        </div>
+
+        <header>
+            
+            <div id="container" onclick="virarContainer()">
+                <div class="card">
+                    <div class="face">
+                        <img src="imagens/avatar-3d-modelo-1.png" alt="Foto avatar">
+                    </div>
+                    <div class="face back">
+                        <div>
+                            <h5>Controle e pesonalize seu avatar da forma como preferir</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav id="menu-principal">
+                <a href="#container-objetivos">OBJETIVOS</a>
+                <a href="#container-evolucao">EVOLUÇÃO</a>
+                <a href="#container-utilitarios">UTILITÁRIOS</a>
+            </nav>
+        </header>
+    </section>
+
+    <section id="secao-principal">
+        <div id="container-objetivos">
+            <div>
+                <h1>Controle seus objetivos diários</h1>
+            </div>
+           <div id="objetivos">
+                <div id="historico-objetivos">
+                    <ol>
+                        <li>30 minutos de exercício matinal</li>
+                        <li>Meditar por 10 minutos</li>
+                        <li>Fazer uma breve pausa para o lanche</li>
+                        <li>Fazer séries de exercícios de aquecimento</li>
+                        <li>Realizar uma sessão de alongamento</li>
+                        <li>Fazer exercícios de alta intensidade (HIIT)</li>
+                    </ol>
+                </div>
+                <div id="adicionar-objetivos">
+                    <input type="text" id="nova-tarefa" placeholder="Teste adicionando uma nova tarefa">
+                    <button onclick="adicionarTarefa()">Adicionar</button>
+                </div>
+           </div>
+        </div>
+
+        <div id="container-evolucao">
+            <div class="parte-textual">
+                <h1>Acompanhe sua evolução em tempo real</h1>
+
+                <article>
+                    <p>A importância de acompanhar a evolução pessoal reside no poder transformador que essa prática pode ter em nossas vidas. Ao monitorar nosso crescimento, conquistas e aprendizados ao longo do tempo, ganhamos uma visão clara de nosso desenvolvimento individual.</p>
+                </article>
+            </div>
+            <div id="container-grafico">
+                <div id="grafico">
+                    <img src="imagens/grafico-evolucao.png" alt="Grafico de Evolução">
+                </div>
+                <div id="info-grafico">
+                    <h3>Gere gráficos em tempo real do seu desenvolvimento</h3>
+
+                    <ul>
+                        <li>Gordura corporal</li>
+                        <li>Massa magra</li>
+                        <li>Peso</li>
+                        <li>Medidas</li>
+                        <li>Desempenho</li>
+                    </ul>
+
+                    <h3>E muito mais...</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="container-utilitarios">
+            <div class="parte-textual">
+                <h1>Tenha acesso a uma vasta quantidade de utilitários</h1>
+
+                <article>
+                    <p>A presença de utilitários para controlar a saúde desempenha um papel vital na promoção do bem-estar individual. Essas ferramentas fornecem meios eficazes para monitorar diversos aspectos da saúde, desde a atividade física e nutrição até a qualidade do sono e o gerenciamento do estresse.</p>
+                </article>
+            </div>
+            <div id="utilitarios">
+                <div id="utilitarios-box-principal">
+                    <span onclick="trocarImagem(-1)" id="seta-esquerda"><img id="imagem-seta-esquerda" src="imagens/seta-esquerda.png" alt="Seta para a esqueda"></span>
+
+                    <div id="box-utilitarios">
+                        <img id="imagem" src="imagens/utilitario-1.png" alt="Seta para a direita">
+                    </div>
+
+                    <span onclick="trocarImagem(1)" id="seta-direita"><img id="imagem-seta-direita" src="imagens/seta-direita.png"></span>
+                </div>
+                <div id="funcao-utilitarios">
+                    <div id="funcao" >
+                        <h1>Rastreamento de Atividade Física</h1>
+                        <ul>
+                            <li>Monitoram passos</li>
+                            <li>Distância percorrida</li>
+                            <li>Calorias queimadas</li>
+                            <li>Atividades físicas</li>
+                        </ul>
+                    </div>
+                    <div id="funcao-1" class="box-funcao-utilitarios">
+                        <h1>Rastreamento de Atividade Física</h1>
+                        <ul>
+                            <li>Monitora passos</li>
+                            <li>Distância percorrida</li>
+                            <li>Calorias queimadas</li>
+                            <li>Atividades físicas</li>
+                        </ul>
+                    </div>
+                    <div id="funcao-2" class="box-funcao-utilitarios">
+                        <h1>Monitoramento de Saúde Cardiovascular</h1>
+                        <ul>
+                            <li>Acompanha a pressão arterial</li>
+                            <li>Frequência cardíaca</li>
+                            <li>Emite alarmes caso necessário</li>
+                        </ul>
+                    </div>
+                    <div id="funcao-3" class="box-funcao-utilitarios">
+                        <h1>Hidratação</h1>
+                        <ul>
+                            <li>Lembra de realizar a ingestão de água ao longo do dia</li>
+                            <li>Registra a quantidade ingerida no dia</li>
+                        </ul>
+                    </div>
+                    <div id="funcao-4" class="box-funcao-utilitarios">
+                        <h1>Monitor de Sono</h1>
+                        <ul>
+                            <li>Analisam padrões de sono</li>
+                            <li>Oferece insights para melhorar a qualidade do sono</li>
+                            <li>Controla o tempo de sono</li>
+                        </ul>
+                    </div>
+                    <div id="funcao-5" class="box-funcao-utilitarios">
+                        <h1>E muito mais</h1>
+                        <ul>
+                            <li>Explore todas as possibilidades de utilitários para tornar o seu dia a dia muito mais eficiente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div id="links-footer">
+            <a href="#container-objetivos">OBJETIVOS</a>
+            <a href="#container-evolucao">EVOLUÇÃO</a>
+            <a href="#container-utilitarios">UTILITÁRIOS</a>
+        </div>
+        <div id="texto-footer">
+            <h3>Projeto autoral desenvolvido para o processo seletivo da Omnisaude.</h3>
+            <h3>Todas as informações apresentadas são ficticias.</h3>
+        </div>
+        <div id="copyR">
+            <h3>&copy 2023 - César Caus</h3>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    border-bottom: 2px solid black;
+}
+
+#secao-superior {
+    background: url(imagens/fundo-header.png);
+}
+
+/*Barra superior para alternar entre o modo escuro e o modo claro*/
+
+#barra-superior {
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    align-items: center;  
+}
+
+#modo-claro-escuro {
+    display: flex;
+    width: 40px;
+    height: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px 30px 0 0;
+    cursor: pointer;
+}
+
+#modo {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 100%;
+    margin: 0 2.5px;
+    background-color: black;
+}
+
+/*Inicio do header*/
+
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.195);
+    padding: 30px 0;
+}
+
+@media (max-width: 690px) {
+    header {
+        justify-content: center;
+    }
+}
+
+#container {
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+  
+.card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+  
+.card.back {
+    transform: rotateY(180deg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border: 5px groove rgb(0, 0, 0);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.face:hover {
+    box-shadow: 0 0 40px rgba(214, 251, 254, 0.8);
+}
+
+.face img {
+    width: 150px;
+    height: 150px;
+}
+  
+.back {
+    transform: rotateY(180deg);
+}
+
+.back h5 {
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#menu-principal { /*Menu superior para navegação na pagina*/
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+#menu-principal a {
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-top: 2px solid black;
+    margin: 10px;
+}
+
+@media (max-width:500px) {
+    #menu-principal a {
+       font-size: 14px;
+    }
+}
+
+/*Inicio do container principal*/
+
+#secao-principal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Inicicio do container de objetivos*/
+
+#container-objetivos {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(imagens/avatar-fundo-objetivos.png) no-repeat right;
+}
+
+#container-objetivos h1 {
+    font-size: 40px;
+    padding: 40px;
+}
+
+#objetivos {
+    width:50%;
+    border-radius: 5px;
+    margin: 50px auto;
+    border: 2px solid black;
+    box-shadow: 0 10px 50px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+#historico-objetivos {
+    width: 80%;
+    padding: 20px 50px;
+    margin: 20px auto;
+}
+
+#historico-objetivos li {
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    background: url(imagens/objetivo-concluido.png) no-repeat right;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.274);
+}
+
+#objetivos input {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    width: 210px;
+}
+
+#objetivos button {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+@media (max-width:1100px) {
+    #container-objetivos {
+        background: none;
+    }
+
+    #historico-objetivos li {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+
+    #objetivos {
+        width:80%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width:500px) {
+
+    #historico-objetivos li {
+        font-size: 12px;
+        padding: 10px 0;
+        background: none;
+    }
+
+    #objetivos {
+        width:90%;
+    }
+
+    #objetivos input {
+        width: 55%;
+    }
+    
+    #objetivos button { 
+        width: 30%;
+        font-size: 12px;
+    }
+}
+
+/*Inicio do container de evolucao*/
+
+.parte-textual {
+    background-color: rgba(217, 217, 217, 0.516);
+    box-shadow: -10px -10px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 5px solid black;
+}
+
+.parte-textual h1 {
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    padding: 40px 0;
+}
+
+.parte-textual article {
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    line-height: 25px;
+}
+
+#container-grafico { /*Aqui foi aplicado o efeito Parallax*/
+    background: url(imagens/fundo-evolucao.png) no-repeat;
+    height: 100%;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+#grafico {
+    padding:30px;
+    margin: 50px;
+}
+
+#info-grafico {
+    width: 300px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.856);
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#info-grafico h3 {
+    padding: 30px;
+}
+
+#info-grafico li {
+    list-style: none;
+    padding: 10px;
+    border-top: 2px dotted rgba(0, 0, 0, 0.256);
+}
+
+#info-grafico li:hover { 
+  background-color: rgba(0, 0, 0, 0.338);
+  color: white;
+}
+
+@media (max-width:900px) {
+    #container-grafico {
+        flex-direction: column;
+    }
+
+    #container-grafico img {
+        width: 300px;
+    }
+}
+
+/*Inicio do container de utilitarios*/
+
+#container-utilitarios {
+    width: 100%;
+    background-color: white;
+    border-top: 5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: none;
+}
+
+
+#container-utilitarios .parte-textual {
+    box-shadow: 0 50px 60px rgba(0, 0, 0, 0.3);
+    border: none;
+    z-index: 2;
+}
+
+#utilitarios {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: url(imagens/fundo-utilitarios.png) bottom left;
+    z-index: 1;
+}
+
+#utilitarios-box-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box-utilitarios {
+    background-color: white;
+    width: 280px;
+    height: 280px;
+    border: 4px groove rgb(8, 8, 8);
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.195);
+}
+
+#funcao-utilitarios {
+    width: 280px;
+    height: 280px;
+    background-color: rgba(135, 135, 135, 0.09);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.195);
+}
+
+#seta-esquerda {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#seta-direita {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.box-funcao-utilitarios {
+    display: none;
+}
+
+#funcao {
+    text-align: center;
+    padding: 20px;
+}
+
+#funcao ul {
+    padding: 30px;
+}
+
+#funcao ul li{
+    padding: 10px;
+}
+
+@media (max-width: 1100px) {
+    #utilitarios {
+        background: none
+    }
+}
+
+@media (max-width: 750px) {
+    #utilitarios {
+        flex-direction: column;
+        background: none;
+    }
+
+    #box-utilitarios {
+        width: 250px;
+        height: 250px;
+    }
+    
+    #box-utilitarios img{
+        width: 250px;
+        height: 250px;
+    }
+
+    #funcao-utilitarios {
+        margin-top: 30px;
+    }
+}
+
+/*Inicio do Footer*/ 
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 2px solid rgba(128, 128, 128, 0.259);
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+}
+
+#texto-footer {
+    margin-top: 10px;
+}
+
+footer h3 {
+    font-size: 13px;
+    padding: 2px;
+}
+
+#copyR {
+    font-size: 12px;
+    padding: 5px;
+    opacity: 0.5;
+}
